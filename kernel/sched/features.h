@@ -39,7 +39,13 @@ SCHED_FEAT(WAKEUP_PREEMPTION, true)
 /*
  * Use arch dependent cpu capacity functions
  */
+
 SCHED_FEAT(ARCH_CAPACITY, true)
+
+/*
+ *Use arch dependent cpu power functions
+ */
+
 SCHED_FEAT(ARCH_POWER, true)
 
 SCHED_FEAT(HRTICK, false)
