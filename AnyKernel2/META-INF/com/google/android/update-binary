@@ -43,17 +43,17 @@ chmod -R 755 /tmp/anykernel/tools /tmp/anykernel/bin;
 bb=/tmp/anykernel/tools/busybox;
 
 ui_print "$(file_getprop /tmp/anykernel/anykernel.sh kernel.string)";
-ui_print "$(====================================================)":
-ui_print "$(¦¦+  ¦¦+¦¦¦¦¦¦¦¦+¦¦¦¦¦¦+ ¦¦¦¦¦¦¦+¦¦¦+   ¦¦¦+¦¦¦¦¦¦¦+)":
-ui_print "$(+¦¦+¦¦+++--¦¦+--+¦¦+--¦¦+¦¦+----+¦¦¦¦+ ¦¦¦¦¦¦¦+----+)":
-ui_print "$( +¦¦¦++    ¦¦¦   ¦¦¦¦¦¦++¦¦¦¦¦+  ¦¦+¦¦¦¦+¦¦¦¦¦¦¦¦+  )":
-ui_print "$( ¦¦+¦¦+    ¦¦¦   ¦¦+--¦¦+¦¦+--+  ¦¦¦+¦¦++¦¦¦¦¦+--+  )":
-ui_print "$(¦¦++ ¦¦+   ¦¦¦   ¦¦¦  ¦¦¦¦¦¦¦¦¦¦+¦¦¦ +-+ ¦¦¦¦¦¦¦¦¦¦+)":
-ui_print "$(+-+  +-+   +-+   +-+  +-++------++-+     +-++------+)":
-ui_print "$(====================================================)":
-ui_print "$(                |/  _   __  _  _  |                 )":
-ui_print "$(                |\ (/_ | ( | |(/_ |                 )":
-ui_print "$(====================================================)":
+ui_print "$(====================================================)";
+ui_print "$(¦¦+  ¦¦+¦¦¦¦¦¦¦¦+¦¦¦¦¦¦+ ¦¦¦¦¦¦¦+¦¦¦+   ¦¦¦+¦¦¦¦¦¦¦+)";
+ui_print "$(+¦¦+¦¦+++--¦¦+--+¦¦+--¦¦+¦¦+----+¦¦¦¦+ ¦¦¦¦¦¦¦+----+)";
+ui_print "$( +¦¦¦++    ¦¦¦   ¦¦¦¦¦¦++¦¦¦¦¦+  ¦¦+¦¦¦¦+¦¦¦¦¦¦¦¦+  )";
+ui_print "$( ¦¦+¦¦+    ¦¦¦   ¦¦+--¦¦+¦¦+--+  ¦¦¦+¦¦++¦¦¦¦¦+--+  )";
+ui_print "$(¦¦++ ¦¦+   ¦¦¦   ¦¦¦  ¦¦¦¦¦¦¦¦¦¦+¦¦¦ +-+ ¦¦¦¦¦¦¦¦¦¦+)";
+ui_print "$(+-+  +-+   +-+   +-+  +-++------++-+     +-++------+)";
+ui_print "$(====================================================)";
+ui_print "$(                |/  _   __  _  _  |                 )";
+ui_print "$(                |\ (/_ | ( | |(/_ |                 )";
+ui_print "$(====================================================)";
 umount /system;
 mount -o rw -t auto /system;
 mount /data;
@@ -77,7 +77,7 @@ if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.initd)" == 1 ]; then
   ui_print "======================Hardware======================";
   ui_print "Device  : Xiaomi Redmi 4/4X";
   ui_print "Codename: Santoni";
-  ui_print "====================================================":
+  ui_print "====================================================";
   mkdir /system/etc/init.d;
   set_perm_recursive 0 0 0755 0755 /system/etc/init.d;
 fi;
@@ -85,9 +85,9 @@ fi;
 if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.system)" == 1 ]; then
   ui_print "=======================Kernel=======================";
   ui_print "Version: 1.0 Kerkera";
-  ui_print "Type   : Non-Treble":
-  ui_print "By     : Jyotiraditya":
-  ui_print "====================================================":
+  ui_print "Type   : Non-Treble";
+  ui_print "By     : Jyotiraditya";
+  ui_print "====================================================";
   cp -fr /tmp/anykernel/system/* /system/;
   set_perm_recursive 0 0 0755 0755 /system/etc/init.d/Velocity;
 fi;
