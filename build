@@ -1,0 +1,29 @@
+#!/bin/bash
+
+VER=$1
+SUB=$2
+
+export ARCH=arm64 && export CROSS_COMPILE=~/gcc.4.9/bin/aarch64-linux-android- && export KBUILD_BUILD_USER=jyotiraditya && export KBUILD_BUILD_HOST=Boombox
+
+mkdir -p out
+
+make O=out santoni_defconfig
+
+make O=out -j$(nproc --all)
+
+rm -f AnyKernel2/zImage
+
+rm -f AnyKernel2/*.zip
+
+mv out/arch/arm64/boot/Image.gz-dtb AnyKernel2/zImage
+
+cd AnyKernel2
+
+if [ ! $VER ] && [ ! $SUB ]; then
+	VER=0
+	SUB=0
+fi
+
+zip -r Xtreme-v$VER.$SUB-AOSP-O_HM4X.zip *
+
+curl --upload Xtreme-v$VER.$SUB-AOSP-O_HM4X.zip https://transfer.sh/Xtreme-v$VER.$SUB-AOSP-O_HM4X.zip

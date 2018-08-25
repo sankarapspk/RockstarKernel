@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -f AnyKernel2/zImage
+
+make clean && make mrproper
