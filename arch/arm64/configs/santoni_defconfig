@@ -1,5 +1,5 @@
 # Automatically generated file; DO NOT EDIT
-# Linux/arm64 3.18.123 Kernel Configuration
+# Linux/arm64 3.18.124 Kernel Configuration
 #
 
 CONFIG_ARM64=y
@@ -435,7 +435,7 @@ CONFIG_MIGRATION=y
 CONFIG_PHYS_ADDR_T_64BIT=y
 CONFIG_ZONE_DMA_FLAG=1
 CONFIG_BOUNCE=y
- CONFIG_KSM=y
+CONFIG_KSM=y
 CONFIG_UKSM=y
 # CONFIG_KSM_LEGACY is not set
 CONFIG_DEFAULT_MMAP_MIN_ADDR=4096
